@@ -22,7 +22,7 @@ public class StartButtom : MonoBehaviour {
         GameObject.FindGameObjectWithTag("button").GetComponent<SpriteRenderer>().enabled = true;
         MyCamera.isFixing = true;
         SceneManager.LoadScene("PlayerScene", LoadSceneMode.Additive);
-        SceneChanger.Change("标题界面", "C1S1", "我不知道我在哪里", 3.5f,"BGM2",1,true,2);
+        SceneChanger.Change("标题界面", "C1S1", "不知道怎么了，我独自来到镇子外。", 3.5f,"BGM2",1,true,2);
         厨师.counter = 1;
     }
 }

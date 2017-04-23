@@ -18,9 +18,7 @@ public class BasicInformation : MonoBehaviour {
     void Awake()
     {
         FixSubNum();
-        BoxCollider bc =
-        GetComponent<BoxCollider>();
-        if(bc!=null)bc.center -= new Vector3(0, 0, GetComponent<BoxCollider>().center.z);
+        GetComponent<BoxCollider>().center -= new Vector3(0, 0, GetComponent<BoxCollider>().center.z);
         SpriteRenderer spr = GetComponent<SpriteRenderer>();
         if (spr != null) transform.position -= new Vector3(0,0,transform.position.z-7)+ spr.sortingOrder * new Vector3(0, 0, 1);//根据物体渲染顺序修正碰撞箱位置
     }

@@ -42,13 +42,11 @@ public class Begin : MonoBehaviour {
             AudioSystem.ChangeBGM("BGM1", 1);
             SceneManager.UnloadSceneAsync("片头");
             MouseIcon.Change(1);
-            MenuButtom.On = true;
         }
 	}
 
     IEnumerator begin()
     {
-        MenuButtom.On = false;
         Cursor.visible = false;
         MouseIcon.Change(0);
         CameraEffectChange.ChangeEffect(0);
@@ -128,13 +126,12 @@ public class Begin : MonoBehaviour {
         AudioSystem.ChangeBGM("BGM1",7);
         SceneManager.UnloadSceneAsync("片头");
         MouseIcon.Change(1);
-        MenuButtom.On = true;
     }
 
     public IEnumerator Words1()
     {
         yield return new WaitForSeconds(2.8f);
-        SubtitleSystem.ShowSpecialSubtitle("“和平”是什么？", 4f);
+        SubtitleSystem.ShowSpecialSubtitle("人们都喜欢和平美好的生活", 4f);
     }
 
     public IEnumerator Words2()
@@ -146,12 +143,12 @@ public class Begin : MonoBehaviour {
     public IEnumerator Words3()
     {
         yield return new WaitForSeconds(1);
-        SubtitleSystem.ShowSpecialSubtitle("那是我曾经拥有的生活", 3f);
+        SubtitleSystem.ShowSpecialSubtitle("就像我所拥有的那样", 3f);
     }
 
     public IEnumerator Words4()
     {
         yield return new WaitForSeconds(1);
-        SubtitleSystem.ShowSpecialSubtitle("直到......", 4f);
+        SubtitleSystem.ShowSpecialSubtitle("直到······", 4f);
     }
 }
